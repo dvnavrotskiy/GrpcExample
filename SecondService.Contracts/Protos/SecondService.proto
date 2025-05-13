@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "SecondServiceApi";
+
+service SecondServiceApiProvider {
+  rpc GetBasicData (BasicRequest) returns (BasicResponse);
+}
+
+message BasicRequest{
+  string State = 1;
+}
+
+message BasicResponse{
+  string StatusString = 1;
+}
